@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>나의 버킷리스트</title>
+  
+   
+    
+
+</head>
+<body>
+  <h1>나의 버킷리스트</h1>
+  
+<style>
+  .todo {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .done {
+    text-decoration: line-through;
+  }
+</style>
+<p class="todo" style="font-size: 25px;">스카이다이빙하기</p>
+<p class="todo" style="font-size: 25px;">테슬라 자율주행 운전하기</p>
+ <p class="todo" style="font-size: 25px;">고양이 키우기</p>
+ <p class="todo" style="font-size: 25px;">좋아하는 만화책 완결보기</p>
+ <p class="todo" style="font-size: 25px;">뉴옥가보기</p>
+  
+
+  <script>
+    const items = document.querySelectorAll(".todo");
+
+    items.forEach(function(item) {
+      item.addEventListener("click", function() {
+        item.classList.toggle("done");
+      });
+    });
+  </script>
+</body>
+</html>
